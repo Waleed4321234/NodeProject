@@ -22,5 +22,6 @@ async function  GetFilterData(req,res){
     
 }
 module.exports={
+    
     GetFilterData
 }
