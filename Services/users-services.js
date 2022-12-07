@@ -5,6 +5,8 @@ async function  GetFilterData(req,res){
     //console.log(await user_controller.getPosts())
     const myPosts=await fetch('https://jsonplaceholder.typicode.com/comments')
     const posts=await myPosts.json();
+
+
  
     return posts[2]
    //console.log('in get filter : ', posts[2])

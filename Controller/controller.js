@@ -1,8 +1,8 @@
-const fetch=require("node-fetch")
-const user_service=require('../Services/users-services')
-function users_list (req, res){
+const fetch = require("node-fetch")
+const user_service = require('../Services/users-services')
+function users_list(req, res) {
     res.send("NOT IMPLEMENTED: users list");
-  };
+};
 
 
 /*const a = async function getPosts(){
@@ -14,20 +14,20 @@ function users_list (req, res){
     //console.log(response)
     
 }*/
-async function getfilter(req,res){
-    const updatedposts=await user_service.GetFilterData ()
-    if(!updatedposts){
-        res.json({success:false,message:'no posts'})
+async function getfilter(req, res) {
+    const updatedposts = await user_service.GetFilterData()
+    if (!updatedposts) {
+        res.json({ success: false, message: 'no posts' })
     }
     //console.log('In getfilter',updatedposts)
-    else{
-        res.json({success:true,message:'posts found',updatedposts})
+    else {
+        res.json({ success: true, message: 'posts found', updatedposts })
     }
 
 
 }
-module.exports={
-    
+module.exports = {
+
     getfilter,
-    
+
 }
