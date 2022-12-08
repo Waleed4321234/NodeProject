@@ -7,8 +7,8 @@ async function  GetFilterData(req,res){
     const posts=await myPosts.json();
 
 
- 
-    return posts[2]
+const filtered=posts.filter(j=>j.id==5)
+    return filtered
    //console.log('in get filter : ', posts[2])
    /*posts.forEach(element => {
     if(element.postId==2){

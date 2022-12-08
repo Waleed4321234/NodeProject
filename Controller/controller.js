@@ -15,7 +15,10 @@ function users_list(req, res) {
     
 }*/
 async function getfilter(req, res) {
+
     const updatedposts = await user_service.GetFilterData()
+    
+
     if (!updatedposts) {
         res.json({ success: false, message: 'no posts' })
     }
